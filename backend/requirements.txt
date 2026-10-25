@@ -26,3 +26,4 @@ websockets==17.3
 pillow-heif
 PyMuPDF
 pdf2docx
+pdfplumber
