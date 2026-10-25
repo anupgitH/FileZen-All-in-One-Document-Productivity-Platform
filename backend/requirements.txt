@@ -27,3 +27,5 @@ pillow-heif
 PyMuPDF
 pdf2docx
 pdfplumber
+openpyxl
+openpyxl
