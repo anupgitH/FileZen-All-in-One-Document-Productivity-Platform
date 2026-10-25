@@ -1,0 +1,354 @@
+.image-compressor {
+  width: 100%;
+  max-width: 100%;
+  color: #192338;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.image-compressor *,
+.image-compressor *::before,
+.image-compressor *::after {
+  box-sizing: border-box;
+}
+
+.compressor-heading {
+  text-align: center;
+  margin: 0 auto 38px;
+}
+
+.compressor-eyebrow {
+  color: #625bff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 0 0 14px;
+}
+
+.compressor-heading h2 {
+  margin: 0 0 14px;
+  color: #192338;
+  font-size: clamp(27px, 3.2vw, 38px);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.compressor-heading > p:last-child {
+  margin: 0;
+  color: #748097;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.compressor-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.compressor-tabs button {
+  min-height: 46px;
+  border: 1px solid #dfe2f0;
+  border-radius: 10px;
+  background: #fff;
+  color: #5d6478;
+  padding: 11px 18px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.compressor-tabs button:hover {
+  border-color: #625bff;
+  color: #625bff;
+}
+
+.compressor-tabs button.active {
+  color: #fff;
+  border-color: #625bff;
+  background: #625bff;
+}
+
+.compressor-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 220px;
+  padding: 30px 20px;
+  text-align: center;
+  background: #fafbff;
+  border: 2px dashed #d7dced;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.compressor-upload:hover {
+  background: #f5f4ff;
+  border-color: #625bff;
+}
+
+.compressor-upload-icon {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  background: #eeedff;
+  color: #625bff;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.compressor-upload strong {
+  color: #202941;
+  font-size: 17px;
+}
+
+.compressor-upload > span:not(.compressor-upload-icon) {
+  color: #69758c;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.compressor-upload small {
+  color: #8993a8;
+  font-size: 12px;
+}
+
+.compressor-upload input[type="file"] {
+  width: 100%;
+  max-width: 360px;
+  margin-top: 5px;
+  color: #5e687d;
+  font-size: 13px;
+}
+
+.compressor-file-info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8f9fd;
+  border: 1px solid #e6e9f2;
+  border-radius: 12px;
+}
+
+.compressor-file-info > div {
+  display: flex;
+  flex: 1 1 160px;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.compressor-file-info span {
+  color: #8a94a8;
+  font-size: 12px;
+}
+
+.compressor-file-info strong {
+  color: #293249;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.compressor-clear {
+  padding: 8px 12px;
+  border: 1px solid #f0d3d3;
+  border-radius: 8px;
+  background: #fff;
+  color: #b42318;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.compressor-settings {
+  display: grid;
+  gap: 12px;
+  margin: 26px 0;
+}
+
+.compressor-settings label {
+  margin-top: 5px;
+  color: #39445c;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.compressor-settings input[type="number"] {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #dce1ed;
+  border-radius: 10px;
+  background: #fff;
+  color: #192338;
+  font: inherit;
+  outline: none;
+}
+
+.compressor-settings input[type="number"]:focus {
+  border-color: #625bff;
+  box-shadow: 0 0 0 3px rgba(98, 91, 255, 0.1);
+}
+
+.compressor-settings input[type="range"] {
+  width: 100%;
+  accent-color: #625bff;
+  cursor: pointer;
+}
+
+.compressor-settings p {
+  margin: 0;
+  color: #748097;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.compressor-preview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.compressor-preview-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid #e5e8f1;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.compressor-preview-card h3 {
+  margin: 0 0 12px;
+  color: #303a51;
+  font-size: 14px;
+}
+
+.compressor-preview-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 9px;
+  background: #f7f8fc;
+}
+
+.compressor-preview-card p {
+  margin: 12px 0 0;
+  color: #748097;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.compressor-message {
+  margin: 20px 0;
+  padding: 15px 17px;
+  border: 1px solid #c8eed8;
+  border-radius: 10px;
+  background: #effaf4;
+  color: #147747;
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.compressor-message.error {
+  border-color: #ffd2d2;
+  background: #fff1f1;
+  color: #b42318;
+}
+
+.compressor-primary-button,
+.compressor-download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 20px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.compressor-primary-button {
+  background: #625bff;
+  color: #fff;
+}
+
+.compressor-primary-button:hover:not(:disabled) {
+  background: #5148e5;
+  transform: translateY(-1px);
+}
+
+.compressor-primary-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.compressor-download-button {
+  margin-top: 12px;
+  border-color: #d9d7ff;
+  background: #f3f2ff;
+  color: #5148e5;
+}
+
+.compressor-download-button:hover {
+  background: #e8e6ff;
+}
+
+.compressor-privacy {
+  margin: 22px 0 0;
+  color: #8b95aa;
+  font-size: 12px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .compressor-heading {
+    margin-bottom: 26px;
+  }
+
+  .compressor-heading h2 {
+    letter-spacing: -0.7px;
+  }
+
+  .compressor-tabs {
+    flex-direction: column;
+  }
+
+  .compressor-tabs button {
+    width: 100%;
+  }
+
+  .compressor-preview {
+    grid-template-columns: 1fr;
+  }
+
+  .compressor-preview-card img {
+    height: 250px;
+  }
+
+  .compressor-upload {
+    padding: 24px 14px;
+  }
+}
